@@ -1,6 +1,11 @@
 import React from "react";
 import Hero from "../Components/Hero";
 import LanguageCarousel from "../Components/LanguageCarousel";
+import InteractiveActivities from "../Components/InteractiveActivities";
+import LearningMethods from "../Components/LearningMethods";
+import Stats from "../Components/Stats";
+import Testimonials from "../Components/Testimonials";
+import Logo from "../components/Logo";
 const Home = () => {
   return (
     <div className="flex flex-col w-full">
@@ -88,6 +93,68 @@ const Home = () => {
       </div>
 
       <LanguageCarousel />
+
+      {/* Learning Paths Section */}
+
+      {/* Interactive Activities Section */}
+      <InteractiveActivities />
+
+      {/* Learning Methods Section */}
+      <LearningMethods />
+
+      {/* Stats Section */}
+      <Stats />
+
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* Ready to start Section */}
+      <div className="bg-green_1 w-full py-12 lg:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h3 className="font-semibold font-rambla text-green_3 md:text-5xl text-3xl">
+            Ready to start?
+          </h3>
+          <p className="font-rambla font-semibold text-green_3 md:my-12 my-5 md:text-2xl text-xl">
+            Subscribe now, book a session with a teacher, or contact us with any
+            questions-let's make
+            <br /> learning English and French fun and effortless together!
+          </p>
+          <div className="flex md:gap-14 gap-6 w-full justify-center">
+            <div className="md:w-[370px] w-[220px] md:h-[70px] h-[50px] bg-green_2 text-white_1 flex justify-center items-center md:text-3xl text-xl font-rambla rounded-lg cursor-pointer">
+              Subscribe Now!
+            </div>
+            <div className="md:w-[370px] w-[220px] md:h-[70px] h-[50px] bg-green_2 text-white_1 flex justify-center items-center md:text-3xl text-xl font-rambla rounded-lg cursor-pointer">
+              Book a class
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ's section */}
+      <div className="bg-green_3 w-full py-12 lg:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white font-rambla">
+          <hr className="w-64 mx-auto mb-5"/>
+          <h3 className="md:text-5xl text-2xl md:mb-10 mb-5 font-semibold">Not sure yet? Still have some questions?</h3>
+          <p className="md:text-2xl text-xl mb-4">
+            Don't hesitate to contact us and ask us any questions you might
+            have. You have specific needs? You want to learn specific topics?
+            Let us know, we might be able to help you.
+          </p>
+          <p className="md:text-2xl  italic">
+            You can also consult our Frequently asked questions (FAQs) page for
+            more information.
+          </p>
+        </div>
+      </div>
+
+      <div className="bg-white_1 w-full py-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between">
+        <Logo/>
+        <div className="md:w-[370px] w-[220px] md:h-[70px] h-[50px] bg-green_2 text-white_1 flex justify-center items-center text-3xl font-rambla rounded-lg cursor-pointer">
+              Get Started
+            </div>
+        </div>
+      </div>
     </div>
   );
 };
