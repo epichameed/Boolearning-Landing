@@ -9,7 +9,7 @@ const languageData = [
   {
     id: 1,
     title: 'French',
-    description: "Ready to speak the language of love? French, the language of romance, culture, and culinary delights, is spoken by over 300 million people worldwide. Whether you're dreaming of strolling through Parisian streets or impressing friends with your accent, our engaging lessons make learning French easy and fun.",
+    description: "Ready to speak the language of love? French, the language of romance, culture, and culinary delights, is spoken by over 300 million people worldwide. Whether you're dreaming of strolling through Parisian streets, planning to work abroad, build relationships or impressing friends with your accent, our engaging lessons make learning French fun, practical, and accessible." ,
     image: '/french-learning.png'
   },
   {
