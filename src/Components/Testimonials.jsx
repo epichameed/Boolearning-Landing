@@ -71,12 +71,12 @@ const Testimonials = () => {
   ];
   return (
     <div className="bg-white_1 w-full py-12 lg:py-28">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex md:flex-row flex-col justify-center gap-12">
-        <div className="md:w-1/3 w-full">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex lg:flex-row flex-col justify-center gap-12">
+        <div className="lg:w-1/3 w-full lg:block flex flex-col items-center">
           <h3 className="font-rambla font-bold text-green_3 text-3xl">
             What our Students say?
           </h3>
-          <p className="font-poppins leading-[28px] my-7 font-semibold text-lg max-w-[500px]">
+          <p className="font-poppins leading-[28px] my-7 font-semibold text-lg max-w-[500px] lg:text-left text-center">
             Our learning material is crafted from teaching experience and
             continuous feedback from our students, ensuring we always deliver
             the best. Don't just take our word for it—see what our students have
@@ -86,7 +86,7 @@ const Testimonials = () => {
             Learn More!
           </div>
         </div>
-        <div className="md:w-1/2 w-full overflow-visible">
+        <div className="lg:w-1/2 w-full lg:max-w-full max-w-[500px] mx-auto overflow-visible">
           <Slider {...settings} className="testimonial-slider">
             {testimonials.map((testimony, index) => {
               // Calculate the middle slide index based on total slides and slidesToShow
@@ -111,27 +111,23 @@ const Testimonials = () => {
               // Determine if this slide is the middle slide
               const isMiddleSlide =
                 index === middleSlideIndex % testimonials.length;
-
-              console.log("Current Slide:", currentSlide);
-              console.log("Middle Slide Index:", middleSlideIndex);
-              console.log("Is Middle Slide:", isMiddleSlide);
               return (
                 <div
                   key={index}
-                  className={`max-w-[600px] h-[150px] !flex items-center md:gap-10 gap-5 relative border-4 border-l-[15px] border-[#F3F2F2] testimony ${
+                  className={`max-w-[500px] h-[120px] !flex items-center md:gap-10 gap-5 relative border-4 border-l-[15px] border-[#F3F2F2] testimony ${
                     isMiddleSlide ? "border-green_3 bg-green_2 text-white md:scale-105 md:-ml-10 md:mr-10 shadow-lg" : ""
                   }`}
                 >
                   <img
                     src="/quote-icon.png"
                     alt="quotes"
-                    className="absolute md:top-3 top-7 right-10 md:w-12 w-6"
+                    className="absolute md:top-2 top-7 right-10 md:w-8 w-6"
                   />
                   <div>
                     <img src={testimony.img} alt="" className="w-36 ml-3" />
                   </div>
                   <div>
-                    <h4 className="font-rambla text-xl font-semibold md:mb-3">
+                    <h4 className="font-rambla text-xl font-semibold md:mb-1">
                       {testimony.heading}
                     </h4>
                     <p className="md:text-base text-sm">{testimony.description}</p>
