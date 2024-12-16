@@ -76,8 +76,8 @@ const LearningMethods = () => {
               (method, index) => (
                 <div
                   key={index}
-                  className={`border-4 border-white_1 rounded-lg p-4 lg:p-6 ${
-                    currentSlide === index ? "border-yellow-500" : ""
+                  className={`border-4  rounded-lg p-4 lg:p-6 ${
+                    currentSlide !== index ? "border-white_1" : "border-green_2"
                   } flex-1 lg:flex-none`}
                 >
                   {method}
