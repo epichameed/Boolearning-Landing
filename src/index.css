@@ -11,23 +11,14 @@
 .slider-custom {
   z-index: 10;
 }
-.slick-slider {
-  padding-left: 50px !important;
-}
-.slick-list {
-  padding-left: 50px !important;
-}
-.testimony {
-  margin-bottom: 15px;
-}
-@media screen and (max-width: 720px) {
-    .slick-slider {
-        padding-left: 0 !important;
-      }
-      .slick-list {
-        padding-left: 0 !important;
-      }
-      .testimony {
-        margin-bottom: 0px;
-      }
+@media screen and (min-width: 720px) {
+  .testimonial-slider .slick-slider {
+    padding-left: 50px !important;
+  }
+  .testimonial-slider .slick-list {
+    padding-left: 50px !important;
+  }
+  .testimony {
+    margin-bottom: 15px;
+  }
 }

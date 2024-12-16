@@ -73,21 +73,21 @@ const Testimonials = () => {
     <div className="bg-white_1 w-full py-12 lg:py-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex md:flex-row flex-col justify-center gap-12">
         <div className="md:w-1/3 w-full">
-          <h3 className="font-rambla font-bold text-green_3 md:text-5xl text-3xl">
+          <h3 className="font-rambla font-bold text-green_3 text-3xl">
             What our Students say?
           </h3>
-          <p className="font-poppins leading-[34px] my-7 font-semibold md:text-xl text-lg max-w-[500px]">
+          <p className="font-poppins leading-[28px] my-7 font-semibold text-lg max-w-[500px]">
             Our learning material is crafted from teaching experience and
             continuous feedback from our students, ensuring we always deliver
             the best. Don't just take our word for it—see what our students have
             to say!
           </p>
-          <div className="md:w-[370px] w-[220px] md:h-[70px] h-[50px] bg-green_2 text-white_1 flex justify-center items-center text-3xl font-rambla rounded-lg cursor-pointer">
+          <div className="md:w-[220px] w-[150px] h-[50px] bg-green_2 text-white_1 flex justify-center items-center text-xl font-rambla rounded-lg cursor-pointer">
             Learn More!
           </div>
         </div>
         <div className="md:w-1/2 w-full overflow-visible">
-          <Slider {...settings}>
+          <Slider {...settings} className="testimonial-slider">
             {testimonials.map((testimony, index) => {
               // Calculate the middle slide index based on total slides and slidesToShow
               //   const middleSlideIndex = Math.floor(settings.slidesToShow / 2);

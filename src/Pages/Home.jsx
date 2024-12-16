@@ -95,6 +95,49 @@ const Home = () => {
       <LanguageCarousel />
 
       {/* Learning Paths Section */}
+      <div className="bg-green_3 w-full py-12 lg:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex md:flex-row flex-col">
+          <div className="md:w-1/2 w-full">
+            <h3 className="text-white font-semibold text-3xl">
+              Learning paths
+            </h3>
+            <div className="flex gap-4 font-rambla font-semibold mt-8 md:text-base text-sm text-center">
+              <div className="bg-white text-green_3 rounded-lg px-4 py-1">
+                Learning Plans
+              </div>
+              <div className="bg-white text-green_3 rounded-lg px-4 py-1">
+                Real-life scenario
+              </div>
+              <div className="bg-white text-green_3 rounded-lg px-4 py-1">
+                Self-guided
+              </div>
+            </div>
+            <p className="text-white mt-5">
+              Ready to speak the language of love? French, the language of
+              romance, culture, and culinary delights, is spoken by over 300
+              million people worldwide. Whether you're dreaming of strolling
+              through Parisian streets or impressing friends with your accent,
+              our engaging lessons make learning French easy and fun.
+            </p>
+            <div className="flex gap-4 font-rambla mt-5">
+              <div className="bg-green_2 text-white px-4 py-1 rounded-lg">
+                Learning Plans
+              </div>
+              <div className="bg-green_2 text-white px-4 py-1 rounded-lg">
+                Real-life scenario
+              </div>
+            </div>
+            <p className="text-white text-sm mt-4">
+              Ready to speak the language of love? French, the language of
+              romance, culture, and culinary delights, is spoken by over 300
+              million people worldwide.
+            </p>
+          </div>
+          <div className="md:w-1/2 w-full flex justify-center">
+            <img src="/learning-paths.png" alt="" className="lg:w-96 md:w-full w-64" />
+          </div>
+        </div>
+      </div>
 
       {/* Interactive Activities Section */}
       <InteractiveActivities />
@@ -133,8 +176,10 @@ const Home = () => {
       {/* FAQ's section */}
       <div className="bg-green_3 w-full py-12 lg:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white font-rambla">
-          <hr className="w-64 mx-auto mb-5"/>
-          <h3 className="md:text-5xl text-2xl md:mb-10 mb-5 font-semibold">Not sure yet? Still have some questions?</h3>
+          <hr className="w-64 mx-auto mb-5" />
+          <h3 className="md:text-5xl text-2xl md:mb-10 mb-5 font-semibold">
+            Not sure yet? Still have some questions?
+          </h3>
           <p className="md:text-2xl text-xl mb-4">
             Don't hesitate to contact us and ask us any questions you might
             have. You have specific needs? You want to learn specific topics?
@@ -149,10 +194,10 @@ const Home = () => {
 
       <div className="bg-white_1 w-full py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between">
-        <Logo/>
-        <div className="md:w-[370px] w-[220px] md:h-[70px] h-[50px] bg-green_2 text-white_1 flex justify-center items-center text-3xl font-rambla rounded-lg cursor-pointer">
-              Get Started
-            </div>
+          <Logo />
+          <div className="md:w-[370px] w-[220px] md:h-[70px] h-[50px] bg-green_2 text-white_1 flex justify-center items-center text-3xl font-rambla rounded-lg cursor-pointer">
+            Get Started
+          </div>
         </div>
       </div>
     </div>
