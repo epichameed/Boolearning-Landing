@@ -101,7 +101,7 @@ const Plans = () => {
       </div>
 
       {/* Pricing Cards */}
-      <div className="flex flex-col md:flex-row gap-6 w-full max-w-6xl">
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 w-full max-w-6xl">
         {currentPlans.map((plan, index) => (
           <div
             key={index}
