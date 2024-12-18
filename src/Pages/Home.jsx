@@ -101,14 +101,14 @@ const Home = () => {
             <h3 className="text-white font-semibold md:text-5xl text-3xl">
               Learning paths
             </h3>
-            <div className="flex gap-4 font-rambla font-semibold mt-8 md:text-base text-sm text-center">
-              <div className="bg-white text-green_3 rounded-lg px-4 py-1">
+            <div className="flex md:gap-4 gap-2 font-rambla font-semibold mt-8 md:text-base text-sm text-center">
+              <div className="bg-white text-green_3 rounded-lg md:px-4 px-2 py-1">
                 Learning Plans
               </div>
-              <div className="bg-white text-green_3 rounded-lg px-4 py-1">
+              <div className="bg-white text-green_3 rounded-lg md:px-4 px-2 py-1">
                 Real-life scenario
               </div>
-              <div className="bg-white text-green_3 rounded-lg px-4 py-1">
+              <div className="bg-white text-green_3 rounded-lg md:px-4 px-2 py-1">
                 Self-guided
               </div>
             </div>
@@ -120,10 +120,10 @@ const Home = () => {
               our engaging lessons make learning French easy and fun.
             </p>
             <div className="flex gap-4 font-rambla mt-5">
-              <div className="bg-green_2 text-white px-4 py-1 rounded-lg">
+              <div className="bg-green_2 text-white md:px-4 px-2 py-1 rounded-lg">
                 Learning Plans
               </div>
-              <div className="bg-green_2 text-white px-4 py-1 rounded-lg">
+              <div className="bg-green_2 text-white md:px-4 px-2 py-1 rounded-lg">
                 Real-life scenario
               </div>
             </div>
