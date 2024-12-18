@@ -8,6 +8,7 @@ export default {
         rambla: ['Rambla', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
         pragatiNarrow: ['Pragati Narrow', 'sans-serif'],
+        raleway: ['Raleway', 'sans-serif']
       },
       colors: {
         // Define custom colors
