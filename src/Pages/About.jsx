@@ -57,8 +57,8 @@ const About = () => {
             <div className="w-full md:flex hidden items-center">
               <img src="/our-story-l.png" alt="vectors" className="w-[400px]" />
             </div>
-            <div>
-              <p className="font-poppins md:text-lg text-base md:mt-12 mt-6 max-w-[60%] md:leading-[34px] leading-[26px] mx-auto text-left">
+            <div className="md:px-0 px-4">
+              <p className="font-poppins md:text-lg text-base md:mt-12 mt-6 md:max-w-[60%] md:leading-[34px] leading-[26px] mx-auto text-left">
                 The objective of this plan is to introduce learners to essential
                 English language elements, including basic phonetics, sentence
                 structures, vocabulary, and everyday conversation skills. By the
@@ -115,14 +115,15 @@ const About = () => {
           </div>
         </div>
       </div>
+      {/* Who are we? Section */}
       <div className="bg-green_3 w-full py-12 lg:py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-white">
+        <div className="container mx-auto px-6 lg:px-8 text-white">
           <h1 className="font-raleway font-semibold md:text-6xl text-3xl text-center">
             Who are we?
           </h1>
-          <div className="w-full flex md:flex-row flex-col md:pt-10">
+          <div className="w-full flex md:flex-row flex-col-reverse md:pt-10">
             <div className="md:w-1/2 w-full md:pt-20">
-              <p className="text-xl leading-9">
+              <p className="md:text-xl text-base md:leading-9 leading-8">
                 Learn anytime, anywhere! Access all your materials online, on
                 mobile, tablet, or computer. Study at your own pace with
                 self-guided modules, or book personalized sessions with one of
@@ -135,14 +136,15 @@ const About = () => {
               <img
                 src="/who-are-we.png"
                 alt=""
-                className="mx-auto md:w-[500px] w-[300px]"
+                className="mx-auto md:w-[500px] w-[300px] md:my-0 my-5"
               />
             </div>
           </div>
         </div>
       </div>
+      {/* What we believe in... Section */}
       <div className="bg-green_1 w-full py-12 lg:py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-6 lg:px-8">
           <h1 className="font-raleway font-semibold md:text-6xl text-3xl text-center text-green_3 ">
             What we believe in...
           </h1>
@@ -155,7 +157,7 @@ const About = () => {
               />
             </div>
             <div className="md:w-1/2 w-full md:pt-20">
-              <p className="text-xl leading-9 text-black">
+              <p className="md:text-xl text-base md:leading-9 leading-8 text-black">
                 Learn anytime, anywhere! Access all your materials online, on
                 mobile, tablet, or computer. Study at your own pace with
                 self-guided modules, or book personalized sessions with one of
@@ -221,7 +223,7 @@ const About = () => {
           <h1 className="font-raleway font-semibold md:text-6xl text-3xl">
             Our Uniqueness
           </h1>
-          <p className="font-poppins md:text-lg text-base mt-12 max-w-[60%] mx-auto leading-[34px]">
+          <p className="font-poppins md:text-lg text-base mt-12 md:max-w-[60%] max-w-[80%] mx-auto leading-[34px]">
             The objective of this plan is to introduce learners to essential
             English language elements, including basic phonetics, sentence
             structures, vocabulary, and everyday conversation skills. By the end
