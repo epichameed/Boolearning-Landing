@@ -13,7 +13,7 @@ const Home = () => {
       {/* High Quality Content Section */}
       <div className="bg-green_1 w-full py-12 lg:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12">
             <div className="w-full lg:w-1/2">
               <img
                 src="./Purple.png"
@@ -68,7 +68,7 @@ const Home = () => {
       {/* High Quality Content Section */}
       <div className="bg-green_1 w-full py-12 lg:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12">
             <div className="w-full lg:w-1/2">
               <img
                 src="/Purple.png"
