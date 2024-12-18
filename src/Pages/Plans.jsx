@@ -2,7 +2,17 @@ import React, { useState } from 'react'
 
 const Plans = () => {
   const [isTeacherMode, setIsTeacherMode] = useState(false)
+  const handleRedirect = async (planID=1, amount=12) => {
+    const baseURL = import.meta.env.VITE_BASE_URL; // Access via import.meta.env
 
+  if (!baseURL) {
+    console.error('Base URL is not defined in the environment variables.');
+    return;
+  }
+  const url = `${baseURL}/subscriptionpage/${planID}/${amount}`;
+  window.location.href = url;
+  };
+  
   const features = [
     "Learn when you want, where you want",
     "Get big discounts on booking session with teacher",
@@ -139,8 +149,14 @@ const Plans = () => {
                 </div>
               ))}
             </div>
-            <button className="mt-8 w-full bg-green_3 text-white py-3 rounded-md hover:bg-green_2 transition-colors font-medium">
+            <button 
+            onClick={() => {
+              
+              handleRedirect()
+            }}
+            className="mt-8 w-full bg-green_3 text-white py-3 rounded-md hover:bg-green_2 transition-colors font-medium">
               {isTeacherMode ? 'Book Now' : 'Choose Plan'}
+              
             </button>
           </div>
         ))}
