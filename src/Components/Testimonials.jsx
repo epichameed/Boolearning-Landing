@@ -24,18 +24,19 @@ const Testimonials = () => {
     },
     adaptiveHeight: false,
     focusOnSelect: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          vertical: false,
-        },
-      },
-    ],
   };
+  // To make the above slider responsive, add the following property:
+  // responsive: [
+  //   {
+  //     breakpoint: 1024,
+  //     settings: {
+  //       slidesToShow: 1,
+  //       slidesToScroll: 1,
+  //       centerMode: true,
+  //       vertical: false,
+  //     },
+  //   },
+  // ],
 
   const testimonials = [
     {
@@ -106,7 +107,8 @@ const Testimonials = () => {
               // Find the middle slide index
               const middleSlideIndex =
                 Math.floor(visibleSlides / 2) +
-                (currentSlide % testimonials.length) - 1;
+                (currentSlide % testimonials.length) -
+                1;
 
               // Determine if this slide is the middle slide
               const isMiddleSlide =
@@ -114,23 +116,27 @@ const Testimonials = () => {
               return (
                 <div
                   key={index}
-                  className={`max-w-[500px] h-[120px] !flex items-center md:gap-10 gap-5 relative border-4 border-l-[15px] border-[#F3F2F2] testimony ${
-                    isMiddleSlide ? "border-green_3 bg-green_2 text-white md:scale-105 md:-ml-10 md:mr-10 shadow-lg" : ""
+                  className={`md:max-w-[500px] max-w-[330px] h-[120px] !flex items-center md:gap-10 gap-5 relative border-4 border-l-[15px] border-[#F3F2F2] testimony ${
+                    isMiddleSlide
+                      ? "border-green_3 bg-green_2 text-white scale-105 -ml-10 mmr-10 shadow-lg"
+                      : ""
                   }`}
                 >
                   <img
                     src="/quote-icon.png"
                     alt="quotes"
-                    className="absolute md:top-2 top-7 right-10 md:w-8 w-6"
+                    className="absolute md:top-2 top-2 right-10 md:w-8 w-6"
                   />
                   <div>
                     <img src={testimony.img} alt="" className="w-36 ml-3" />
                   </div>
                   <div>
-                    <h4 className="font-rambla text-xl font-semibold md:mb-1">
+                    <h4 className="font-rambla md:text-xl text-base font-semibold md:mb-1">
                       {testimony.heading}
                     </h4>
-                    <p className="md:text-base text-sm">{testimony.description}</p>
+                    <p className="md:text-base text-sm">
+                      {testimony.description}
+                    </p>
                   </div>
                 </div>
               );

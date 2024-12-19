@@ -71,7 +71,7 @@ const LearningMethods = () => {
           different preferences.
         </p>
         <div className="w-full flex flex-col lg:flex-row text-white mt-8 gap-8">
-          <div className="flex lg:flex-col flex-row lg:w-1/3 w-full text-center font-rambla xl:text-3xl text-xl gap-5">
+          <div className="flex flex-col lg:w-1/3 w-full text-center font-rambla xl:text-3xl text-xl gap-5">
             {["Self Learning", "Teachers-led session", "Combo"].map(
               (method, index) => (
                 <div
@@ -93,7 +93,7 @@ const LearningMethods = () => {
                     key={index}
                     className="w-full !flex md:flex-row flex-col bg-white_1 text-black_1 gap-4"
                   >
-                    <div className="xl:!w-[400px] w-[200px] flex-shrink-0">
+                    <div className="xl:w-[400px] w-full xl:h-[400px] h-[200px] flex-shrink-0">
                       <img
                         src={method.img}
                         alt=""
