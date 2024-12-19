@@ -41,21 +41,21 @@ const LearningMethods = () => {
       img: "/learning-methods.png",
       heading: "Self Learning",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standar Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standar",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur purus scelerisque purus congue bibendum. Curabitur ut congue elit. Sed nec euismod nunc. Nunc lorem risus, hendrerit in maximus ut, condimentum eu mauris. Pellentesque id pulvinar ipsum. Cras porta sollicitudin est at imperdiet. Morbi ac posuere mauris. Mauris dapibus enim libero.  ",
       stats: ["Support", "35 hours", "4 weeks"],
     },
     {
       img: "/learning-methods.png",
       heading: "Teachers-led session",
       description:
-        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti porro voluptates id distinctio? Necessitatibus minus odit doloremque provident? Sunt nisi beatae aperiam sapiente ullam atque amet. Quod ab qui exercitationem facere dolores. Maxime, aspernatur autem fugiat veniam accusantium ad similique?",
+        " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur purus scelerisque purus congue bibendum. Curabitur ut congue elit. Sed nec euismod nunc. Nunc lorem risus, hendrerit in maximus ut, condimentum eu mauris. Pellentesque id pulvinar ipsum. Cras porta sollicitudin est at imperdiet. Morbi ac posuere mauris. Mauris dapibus enim libero.",
       stats: ["Support", "35 hours", "4 weeks"],
     },
     {
       img: "/learning-methods.png",
       heading: "Combo",
       description:
-        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti porro voluptates id distinctio? Necessitatibus minus odit doloremque provident? Sunt nisi beatae aperiam sapiente ullam atque amet. Quod ab qui exercitationem facere dolores. Maxime, aspernatur autem fugiat veniam accusantium ad similique?",
+        " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur purus scelerisque purus congue bibendum. Curabitur ut congue elit. Sed nec euismod nunc. Nunc lorem risus, hendrerit in maximus ut, condimentum eu mauris. Pellentesque id pulvinar ipsum. Cras porta sollicitudin est at imperdiet. Morbi ac posuere mauris. Mauris dapibus enim libero.",
       stats: ["Support", "35 hours", "4 weeks"],
     },
   ];
@@ -113,7 +113,7 @@ const LearningMethods = () => {
                           </span>
                         ))}
                       </p>
-                      <div className="w-32 h-10 bg-green_2 text-white rounded-md flex items-center justify-center">
+                      <div className=" h-10  text-green_2 rounded-md flex items-start justify-start font-bold underline">
                         Book a Class
                       </div>
                     </div>

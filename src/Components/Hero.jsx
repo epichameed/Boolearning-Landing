@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 const Hero = () => {
   return (
     <div className="bg-white_1 overflow-hidden w-full">
       <div className="mx-auto px-8 py-12 w-full">
-        <div className="flex flex-col lg:flex-row items-center">
-          <div className="flex flex-col lg:w-1/2 lg:pr-8">
+        <div className="flex flex-col-reverse lg:flex-row items-center">
+          <div className="flex flex-col lg:w-1/2 lg:pr-8 mt-8 lg:mt-0">
             <h1 className="text-4xl lg:text-6xl font-extrabold text-green_3 font-rambla mb-4">
               <span className="block">Join us for fun and</span>
               <span className="block text-green_2">engaging language learning</span>
@@ -25,9 +25,9 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <div className="flex justify-end lg:w-1/2 mt-8 lg:mt-0">
+          <div className="flex justify-end lg:w-1/2">
             <img
-              className="w-full max-w-lg h-auto object-cover "
+              className="w-full max-w-lg h-auto object-cover"
               src="/Hero.png"
               alt="Student learning language"
             />
@@ -35,8 +35,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
-
+export default Hero;
