@@ -5,20 +5,29 @@ const Plans = () => {
   const [isTeacherMode, setIsTeacherMode] = useState(false);
   const [plan, setPlan] = useState([]);
   const [selectedPricing, setSelectedPricing] = useState({});
+  const [selectedDuration, setSelectedDuration] = useState({});  // Change to store duration per plan
 
-  const handlePricingChange = (planId, price) => {
+  const handlePricingChange = (planId, price, duration) => {
+    console.log(price, duration);
     setSelectedPricing((prev) => ({
       ...prev,
       [planId]: price,
     }));
+    setSelectedDuration((prev) => ({
+      ...prev,
+      [planId]: duration,  // Store duration for the specific planId
+    }));
   };
 
   // Filter plans based on packageType
-  const filteredPlans = plan.filter((plan) =>
-    isTeacherMode
+  // Filter plans based on packageType and isActive status
+const filteredPlans = plan.filter(
+  (plan) =>
+    plan.isActive &&
+    (isTeacherMode
       ? plan.packageType === "Instructor's Session"
-      : plan.packageType === 'Monthly'
-  );
+      : plan.packageType === 'Monthly')
+);
 
   useEffect(() => {
     const fetchPlans = async () => {
@@ -70,8 +79,12 @@ const Plans = () => {
       {/* Pricing Cards */}
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 w-full max-w-6xl">
         {filteredPlans.map((plan, index) => {
-          const selectedPrice =
-            selectedPricing[plan.id] || plan.pricing?.[0]?.price || 0;
+          // const selectedPrice =
+          //   selectedPricing[plan.id] || plan.pricing?.[0]?.price || 0;
+          // const selectedDurationText = selectedDuration[plan.id] || plan.pricing?.[0]?.duration || 'N/A';  // Get duration for the specific plan
+
+           const offeredFeatures = plan.features.filter(feature => feature.packageFeature.isOffered);
+          const nonOfferedFeatures = plan.features.filter(feature => !feature.packageFeature.isOffered);
 
           return (
             <div
@@ -81,33 +94,39 @@ const Plans = () => {
               } border border-gray-200 pt-8`}
             >
               {/* Badge on top */}
-              {plan.badge && (
-                <div className="absolute -top-7 left-0 w-full bg-green_3 text-white text-xs text-center font-bold px-4 py-3 rounded-t-xl z-10">
+           {plan.badge && (
+                <div
+                    className="absolute -top-6 left-0 w-[calc(100%+2px)] bg-green_3 text-white text-xs text-center font-bold px-4 py-3 rounded-t-xl z-10"
+                    style={{ marginLeft: '-1px', marginRight: '-1px' }}
+                  > 
                   {plan.badge.badgeText}
                 </div>
-              )}
-
+              )}
               {/* Plan Details */}
               <h2 className="text-xl font-bold mb-2">{plan.packageName}</h2>
               <div className="flex items-baseline mb-1">
                 <span className="text-4xl font-bold">$</span>
-                <span className="text-4xl font-bold">{selectedPrice}</span>
+                <span className="text-4xl font-bold">{plan.pricing?.[0]?.price}</span>
+                <span className="text-xl text-gray-500 ml-2">/{plan.pricing?.[0]?.duration}</span>
               </div>
               <p className="text-sm text-gray-600 mb-6 text-left">
                 {plan.description}
               </p>
 
               {/* Pricing Dropdown */}
-              <div className="mb-4">
+              {/* <div className="mb-4">
                 <label htmlFor={`pricing-${plan.id}`} className="text-gray-600">
                   Choose Duration:
                 </label>
                 <select
                   id={`pricing-${plan.id}`}
-                  className="w-full mt-2 p-2 border rounded-md"
-                  onChange={(e) =>
-                    handlePricingChange(plan.id, e.target.value)
-                  }
+                  className="w-full mt-2 p-2 border border-b-green_3 rounded-md"
+                  onChange={(e) => {
+                    const selectedOption = e.target.selectedOptions[0];
+                    const duration = selectedOption.text;  // The duration text
+                    const price = e.target.value;  // The price
+                    handlePricingChange(plan.id, price, duration);
+                  }}
                 >
                   {plan.pricing.map((pricingOption, idx) => (
                     <option
@@ -118,41 +137,44 @@ const Plans = () => {
                     </option>
                   ))}
                 </select>
-              </div>
+              </div> */}
 
-              {/* Plan Features */}
+               {/* Plan Features */}
               <div className="flex flex-col space-y-4 flex-grow">
-                {plan.features.map((feature, featureIndex) => (
+                {/* Display offered features */}
+                {offeredFeatures.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-start space-x-3">
-                    {feature.packageFeature.isOffered ? (
-                      <svg
-                        className="w-5 h-5 text-green_3 flex-shrink-0 mt-0.5"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                    ) : (
-                      <svg
-                        className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                      </svg>
-                    )}
-                    <span className="text-sm text-gray-600">
-                      {feature.feature}
-                    </span>
+                    <svg
+                      className="w-5 h-5 text-green_3 flex-shrink-0 mt-0.5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span className="text-sm text-gray-600">{feature.feature}</span>
+                  </div>
+                ))}
+
+                {/* Display non-offered features */}
+                {nonOfferedFeatures.map((feature, featureIndex) => (
+                  <div key={featureIndex} className="flex items-start space-x-3">
+                    <svg
+                      className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                    <span className="text-sm text-gray-600">{feature.feature}</span>
                   </div>
                 ))}
               </div>
