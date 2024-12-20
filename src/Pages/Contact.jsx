@@ -118,7 +118,6 @@ const Contact = () => {
                   <option value="english">English</option>
                   <option value="french">French</option>
                   <option value="spanish">Spanish</option>
-                  <option value="german">German</option>
                 </select>
                 <textarea
                   placeholder="Your Message..."
