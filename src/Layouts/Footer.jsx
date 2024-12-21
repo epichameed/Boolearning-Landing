@@ -16,22 +16,22 @@ const Footer = () => {
             </h4>
             <ul className="flex flex-col space-y-2">
               <li>
-                <Link to="/" className="hover:text-green_2">
+                <Link to="/app" className="hover:text-green_2">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/demo" className="hover:text-green_2">
+                <Link to="/app/demo" className="hover:text-green_2">
                   Demo
                 </Link>
               </li>
               <li>
-                <Link to="/faqs" className="hover:text-green_2">
+                <Link to="/app/faqs" className="hover:text-green_2">
                   FAQs
                 </Link>
               </li>
               <li>
-                <Link to="/plans" className="hover:text-green_2">
+                <Link to="/app/plans" className="hover:text-green_2">
                   Plans
                 </Link>
               </li>

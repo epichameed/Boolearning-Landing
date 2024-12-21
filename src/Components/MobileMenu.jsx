@@ -15,12 +15,12 @@ const MobileMenu = ({ isOpen, onClose }) => {
           </button>
         </div>
         <div className="flex flex-col space-y-4 mt-8">
-          <Link to="/" className="text-green_3 hover:text-green_2 text-lg font-pragatiNarrow">Home</Link>
-          <Link to="/demo" className="text-green_3 hover:text-green_2 text-lg font-pragatiNarrow">Demo</Link>
-          <Link to="/faqs" className="text-green_3 hover:text-green_2 text-lg font-pragatiNarrow">FAQs</Link>
-          <Link to="/plans" className="text-green_3 hover:text-green_2 text-lg font-pragatiNarrow">Plans</Link>
-          <Link to="/contact" className="text-green_3 hover:text-green_2 text-lg font-pragatiNarrow">Contact</Link>
-          <Link to="/about" className="text-green_3 hover:text-green_2 text-lg font-pragatiNarrow">About Us</Link>
+          <Link to="/app" className="text-green_3 hover:text-green_2 text-lg font-pragatiNarrow">Home</Link>
+          <Link to="/app/demo" className="text-green_3 hover:text-green_2 text-lg font-pragatiNarrow">Demo</Link>
+          <Link to="/app/faqs" className="text-green_3 hover:text-green_2 text-lg font-pragatiNarrow">FAQs</Link>
+          <Link to="/app/plans" className="text-green_3 hover:text-green_2 text-lg font-pragatiNarrow">Plans</Link>
+          <Link to="/app/contact" className="text-green_3 hover:text-green_2 text-lg font-pragatiNarrow">Contact</Link>
+          <Link to="/app/about" className="text-green_3 hover:text-green_2 text-lg font-pragatiNarrow">About Us</Link>
           <button className="bg-green_2 text-white_1 px-4 py-2 rounded-md hover:bg-green_3 transition-colors font-poppins">
             Sign In
           </button>
